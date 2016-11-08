@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt # single use of plt is commented out
 import os.path  
 import PIL.ImageDraw            
 
-def get_dem_pics(directory=None):
+def get_images(directory=None):
     """
-    Insert desciption here
+    Creates lists of files and images in directory
     """
     if directory == None:
         directory = os.getcwd() # Use working directory if unspecified
@@ -27,3 +27,4 @@ def get_dem_pics(directory=None):
         except IOError:
             pass # do nothing with errors tying to open non-images
     
+    return image_list, file_list
